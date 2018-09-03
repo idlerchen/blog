@@ -1,0 +1,353 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<%@ include file="/page/base/base.jsp" %>
+		<meta charset="utf-8" />
+		<title>Index</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!-- 标准二级导航_博客 begin -->
+			<div style="margin-bottom:6px;margin-top:4px;">
+				<div class="secondaryHeader">
+					<div class="sHBorder">
+						<div class="sHLogo"><span><a href="#"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif" alt="新浪博客" /></a><a href="index.html"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_blog.gif" alt="新浪博客" /></a></span></div>
+						<div class="sHLinks">
+							<a href="page/user/login.jsp">登录</a>&nbsp;|&nbsp;
+							<a href="page/user/register.jsp">注册</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 标准二级导航_博客 end -->
+
+			<div id="banner">
+				<h1>博客首页</h1>
+			</div>
+			<div class="hScape"></div>
+			<div id="nav2">
+				<div id="navTop" class="linkFFF">
+					<ul>
+						<li>
+							<a href="http://blog.sina.com.cn/">首页</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/ent/">娱乐</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/sports/">体育</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/book/">文化</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/tech/">IT</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/finance/">财经</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/auto/">汽车</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/house/">房产</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/edu/">教育</a>
+						</li>
+						<li><img src="http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.gif" /></li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/games/">游戏</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--nav end-->
+			<!--主页面开始-->
+			<div class="hScape"></div>
+			<ul class="menuStyle link3164bf">
+				<li>
+					<a href="http://blog.sina.com.cn/lm/rank/" style="font-weight:normal;">排行榜首页</a>
+				</li>
+				<li>
+					<a href="http://blog.sina.com.cn/lm/top/rank/" style="font-weight:normal;">总流量排行</a>
+				</li>
+				<li>
+					<a href="http://blog.sina.com.cn/lm/top/all/day.html" style="font-weight:normal;">每日排行榜</a>
+				</li>	
+				<li>
+					<a href="http://blog.sina.com.cn/lm/rank/zlbang/" style="font-weight:normal;">每周人气榜</a>
+				</li>
+				<li>
+					<a href="http://blog.sina.com.cn/lm/rank/focusbang/">总关注度榜</a>
+				</li>
+				<li>
+					<a href="http://blog.sina.com.cn/lm/rank/monthbang/">月关注度榜</a>
+				</li>
+
+				<li style="width:373px; float:right; background:none; font-weight:normal; text-align:right;">
+					<form id="blogsearch_f1" name="blogsearch_f1" onsubmit="return blogsearch(this,'blog')" action="http://search.sina.com.cn/" target="_blank">
+						<a href="http://search.sina.com.cn/?t=blog" target="_blank" style="text-decoration:none;">博客搜索</a>：<input type="text" id="k" style="width:133px;" value="请输入查询词" name="q" onClick="javascript:if(this.value=='请输入查询词')this.value='';" /><input type="hidden" name="c" value="blog"><input type="hidden" name="range" value="article">
+						<select style="width:77px;" onchange="blogsearch_change1(this);" size="1" name="by">
+							<option value="all" selected>博客全文</option>
+							<option value="title">文章标题</option>
+							<option value="nick">博客作者</option>
+							<option value="tag">标签</option>
+						</select>
+
+						<input name="" type="image" src="http://i2.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_005.gif" />
+					</form>
+				</li>
+			</ul>
+			<div class="hScape"></div>
+			<div class="Cont">
+				<div class="le">
+					<div><img src="http://i3.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_020.gif" width="116" height="11" /></div>
+					<ul class="liNstyle link5d83b0">
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/all/day.html">总榜</a>
+						</li>
+						<li class="selec">
+							<a href="http://blog.sina.com.cn/lm/top/ent/day.html">娱乐</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/finance/day.html">财经</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/sports/day.html">体育</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/it/day.html">I T</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/cul/day.html">文化</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/edu/day.html">教育</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/mil/day.html">军事</a>
+						</li>
+						<li>
+							<a href="http://blog.sina.com.cn/lm/top/baby/day.html">育儿</a>
+						</li>
+
+
+					</ul>
+					<div><img src="http://i2.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_018.gif" width="116" height="12" /></div>
+				</div>
+				<div class="ri">
+
+					<div class="if">
+						<div class="conn">
+							<table width="593" border="0" cellspacing="0" cellpadding="0" class="table1" id="table_lit_bang_105">
+
+								<tr>
+									<th width="5%" align="center">序号</th>
+									<th width="60%">标题</th>
+									<th width="15%">作者</th>
+									<th width="10%">时间</th>
+									<th width="10%"></th>
+								</tr>
+
+								<tr>
+									<td>
+										<div class="num"><span>1</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_4694741f0102y00n.html?tj=1" target="_blank">怒怼键盘侠是畜生！曾爱杜淳如今二胎张嘉倪火了</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1184134175">释凡影视</a>
+										</div>
+									</td>
+									<td>08-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>2</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_7964e4ec0102ybvw.html?tj=1" target="_blank">黎明女儿正面照首次曝光，网友：脸上肉嘟嘟真想亲一口</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/2036655340">一床情书</a>
+										</div>
+									</td>
+									<td>08-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>3</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_5af303e30102x7li.html?tj=1" target="_blank">《后来的我们》明白了爱的含义，也付出了成长的代价</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1525875683">影评人大侃</a>
+										</div>
+									</td>
+									<td>04-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>4</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_4a1ac6d60102xidt.html?tj=1" target="_blank">谈于和伟在《下一站，别离》中的两次成长：关于亲情父爱与真爱认知</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1243268822">小城小七</a>
+										</div>
+									</td>
+									<td>04-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>5</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_9eafcc590102yqvx.html?tj=1" target="_blank">泥土</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/2662321241">五月天有石</a>
+										</div>
+									</td>
+									<td>08-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>6</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_79499ff60102wtkm.html?tj=1" target="_blank">从脱贫故事里看到的正能量</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/2034868214">周成洋CY</a>
+										</div>
+									</td>
+									<td>05-23</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>7</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_4a17027b0102xx4l.html?tj=1" target="_blank">湖南卫视曾对于正剧良莠兼收，甚至得罪琼瑶，却错过《延禧攻略》</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1243021947">李守智</a>
+										</div>
+									</td>
+									<td>08-27</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>8</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_482219c20102wxly.html?tj=1" target="_blank">原创丨妻子是个“女汉子”，总是管家不当我“夺权”</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1210194370">木子海</a>
+										</div>
+									</td>
+									<td>07-06</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>9</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_51205a7f010304ie.html?tj=1" target="_blank">夜雨</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1361074815">古天乐</a>
+										</div>
+									</td>
+									<td>08-17</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="num"><span>10</span></div>
+									</td>
+									<td style="text-align: left;">
+										<div class="link335bbd textL">
+											<a href="http://blog.sina.com.cn/s/blog_5af303e30102xjjn.html?tj=1" target="_blank">《欧洲攻略》马楚成开启攻略宇宙，这个七夕带你攻城略池</a>
+										</div>
+									</td>
+									<td>
+										<div class="link-ul">
+											<a class="a02" target="_blank" href="http://blog.sina.com.cn/u/1525875683">影评人大侃</a>
+										</div>
+									</td>
+									<td>08-17</td>
+									<td></td>
+								</tr>
+
+
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--主页面结束-->
+
+			<div id="uni_footer">
+				
+			</div>
+		</div>
+
+	</body>
+
+</html>

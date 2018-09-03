@@ -1,0 +1,105 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.alibaba.fastjson.JSON;
+import com.fenbi.blog.bean.Blog;
+import com.fenbi.blog.bean.BlogType;
+import com.fenbi.blog.bean.User;
+import com.fenbi.blog.service.BlogService;
+import com.fenbi.blog.service.BlogTypeService;
+import com.fenbi.blog.service.impl.BlogServiceImpl;
+import com.fenbi.blog.service.impl.BlogTypeServiceImpl;
+import com.fenbi.blog.utils.WEButils;
+
+public class BlogServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+	
+	BlogService bs = new BlogServiceImpl();
+	BlogTypeService bts = new BlogTypeServiceImpl();
+	
+	//插入博文
+	public void saveBlog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Blog blog = WEButils.param2Bean(request, new Blog());
+		User user = (User) request.getSession().getAttribute("loginUser");
+		if(user!=null) {
+			blog.setUserid(user.getId());
+		}
+		System.out.println(blog);
+		int saveBlog = bs.saveBlog(blog);
+		
+		if(saveBlog > 0) {//插入博文成功
+			response.sendRedirect(request.getContextPath()+"/page/personal/blogManage.jsp");
+		}else {//插入失败
+			request.getRequestDispatcher("/page/personal/writeBlog.jsp");
+			
+		}
+	}
+	
+	//修改博文
+	public void updateBlog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Blog blog = WEButils.param2Bean(request, new Blog());
+		int updateBlog = bs.updateBlog(blog);
+		
+		if(updateBlog > 0) {//修改成功
+			response.sendRedirect(request.getContextPath()+"/BlogServlet?method=getBlogByUserId");
+		}else{//修改失败
+			request.getRequestDispatcher("/page/personal/personalCenter.jsp");
+		}
+	}
+	
+	
+	//获取所有博文类型
+	public void getBlogType(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<BlogType> blogtype = bts.getBlogtype();
+		
+		response.setContentType("application/json;charset=utf-8");
+
+		// 设置map属性集
+		HashMap<String, Object> map = new HashMap<>();
+			
+		map.put("blogtype", blogtype);
+		// 将map属性集，转换成json字符串并发送给ajax
+		String jsonStr = JSON.toJSONString(map);
+		response.getWriter().print(jsonStr);
+	}
+	
+	//获取所有博文
+	public void getAllBlog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		List<Blog> allblog = bs.getAllBlog();
+		List<BlogType> blogtype = bts.getBlogtype();
+		
+		request.setAttribute("allblog",allblog);
+		request.setAttribute("blogtype", blogtype);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+	
+	//根据博文类型获取博文
+	public void getBlogByTypeId(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String blogtypeid = request.getParameter("blogtypeid");
+		List<Blog> blogs = bs.getBlogByBlogtype(blogtypeid);
+		request.setAttribute("allblog", blogs);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+	
+	//获取某用户的所有博文
+	public void getBlogByUserId(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		User user = (User) request.getSession().getAttribute("loginUser");
+		
+		int userid = user.getId();
+		List<Blog> blogs = bs.getBlogByUserid(userid);
+		request.setAttribute("blogs", blogs);
+		request.getRequestDispatcher("/page/personal/personalCenter.jsp").forward(request, response);
+	}
+}

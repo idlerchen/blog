@@ -1,0 +1,15 @@
+package com.fenbi.blog.service;
+
+import com.fenbi.blog.bean.User;
+
+public interface UserService {
+	
+	int saveUser(User user);
+	
+	User getUser(String username,String password);
+	
+	User checkUsername(String username);
+	
+	User checkTelephone(String telephone);
+
+}

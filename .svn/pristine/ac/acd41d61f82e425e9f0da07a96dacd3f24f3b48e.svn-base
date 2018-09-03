@@ -1,0 +1,391 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="Content-Language" content="zh-CN" />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,chrome=1" />
+        <meta name="renderer" content="webkit">
+        <title>个人博客</title>
+        <script type="text/javascript">
+        if (self != top) {
+          window.top.location = window.self.location;
+        }
+        </script>
+        <style></style>
+        <link href="http://simg.sinajs.cn/blog7style/css/blog/newblog.css" type="text/css" rel="stylesheet" />
+        <link href="http://simg.sinajs.cn/blog7style/css/common/editor.css" type="text/css" rel="stylesheet" />
+        
+        <link href="http://simg.sinajs.cn/blog7newtpl/css/30/30_1/t.css" type="text/css" rel="stylesheet" />
+        
+    </head>
+    <body>
+            <!--sinatopbar-->
+<div style="z-index:512;" class="nsinatopbar">
+  <div style="position:absolute;left:0;top:0;" id="trayFlashConnetion"></div>
+  <div class="ntopbar_main"> 
+    <a id="login_bar_logo_link_350" href="http://blog.sina.com.cn" target="_blank"><img class="ntopbar_logo" src="http://simg.sinajs.cn/blog7style/images/common/topbar/topbar_logo.gif" width="100" alt="新浪博客"></a>
+    <div class="ntopbar_floatL">
+      <div class="ntopbar_search" id="traySearchBar"></div>
+      <div class="ntopbar_ad" id="loginBarActivity" style="display:none;"></div>
+    </div>
+    <div class="ntopbar_loading"><img src="http://simg.sinajs.cn/blog7style/images/common/loading.gif">加载中…</div>
+  </div>
+</div>
+<!--sinatopbar-->
+        <div class="sinabloga">
+            <div class="sinablogb">
+                <div class="sinablogbody">
+                    <div class="space20"></div>
+                    <div id="SinaBlog_SLOT_39" class="msnTips_lx" style="width:180px;display:none;"></div>
+                    <div class="SG_colW95 SG_colFirst">
+                        <div class="SG_conn">
+                            <div class="SG_connHead">
+                                <span class="title">编辑博文</span>
+                                <span class="edit">
+                                    <span class="tip_r" >
+                <strong id="SinaBlog_SLOT_40"></strong></span><span class="tip_r" ><strong id="SinaBlog_SLOT_44"></strong>
+                                        </span><a class="CP_a_fuc" href="http://help.sina.com.cn/?id=25" target="_blank">[<cite>帮助</cite>]</a>
+                                </span>
+                            </div>
+                            <div class="SG_connBody">
+            
+                                <form id="editorForm" method="post" target="fileFrame" action="">
+                                    <input type="hidden" name="ptype" id="ptype" value=""/>
+                                    <input type="hidden" name="teams" id="teams" value=""/>
+                                    <input type="hidden" name="worldcuptags" id="worldcuptags" value=""/>
+                                    <input type="hidden" name="timestamp" id="timestamp" value="2018-08-28 09" disabled/>
+                                    <input type="hidden" name="album" id="SinaPhotoAlbumList" />
+                                    <input type="hidden" name="album_cite" id="SinaPhotoAlbumCiteList" />
+                                    <input type="hidden" name="blog_id" id="blog_id" value="6beb32ab0102xoj5"/>
+                                    <input type="hidden" name="is_album" id="is_album" value="0"/>
+                                    <input type="hidden" name="old365" value="0"/>
+                                    <input type="hidden" name="stag" value=""/>
+                                    <input type="hidden" name="sno" value=""/>
+                                    <input type="hidden" name="book_worksid" value=""/>
+                                    <input type="hidden" name="channel_id" value=""/>
+                                    <input type="hidden" name="url" value=""/>
+                                    <input type="hidden" name="channel" value=""/>
+                                    <input type="hidden" name="newsid" value=""/>
+                                    <input type="hidden" name="fromuid" value=""/>
+                                    <input type="hidden" name="wid" value=""/>
+                                    <input type="hidden" name="articletj" value="0"/>
+                                    <input type="hidden" name="vtoken" value="2d1cc3aa2978870061573116e6b50827"/>
+                                    <input type="hidden" name="is_media" id="is_media" value="0"/>
+                                    <input type="hidden" name="is_stock" id="is_stock" value="0"/>
+                                    <input type="hidden" name="is_tpl" id="is_tpl" value="0"/>
+                                    <input type="hidden" name="assoc_article" id="assoc_article" value=""/>
+                                    <input type="hidden" name="assoc_style" id="assoc_style" value="1"/>
+                                    <input type="hidden" name="assoc_article_data" id="assoc_article_data" value=""/>
+                                    <input type="hidden" name="article_BGM" id="article_BGM" value=""/>
+                                    <input type="hidden" name="xRankStatus" id="xRankStatus" value="0"/>
+                                    <input type="hidden" name="commentGlobalSwitch" id="commentGlobalSwitch" value=""/>
+                                    <input type="hidden" name="commenthideGlobalSwitch" id="commenthideGlobalSwitch" value=""/>
+                                    <input type="hidden" name="articleStatus_preview" id="articleStatus_preview" value="2"/>
+                                    <input type="hidden" name="source" id="source" value=""/>
+                                    <input type="hidden" name="topic_id" id="topic_id" value="0"/>
+                                    <input type="hidden" name="topic_channel" id="topic_channel" value="0"/>
+                                    <input type="hidden" name="topic_more" id="topic_more" value=""/>
+                                    <input type="hidden" name="utf8" value="1"/>
+                                    <input type="hidden" name="conlen" id="conlen" value=""/>
+                                    <input type="hidden" name="date_pub" id="date_pub" value="2018-08-27"/>
+                                    <input type="hidden" id="articleTime" name="time" value="21:57:56"/>
+									<input type="hidden" id="is_new_editor" name="new_time" value=""/>
+                                    <!--test-->
+                                    <input type="hidden" name="isTimed" id="isTimed" value="0"/>
+                                    <input type="hidden" name="immediatepub" id="immediatepub" value=0 />
+                                    <!-- 内容开始 -->
+                                    <div class="blogEditorWrap">
+                                        <div class="fWrap" style=" padding-bottom:8px;">
+                                            <ul>
+                                                <li><span class="cTit">标题：</span>
+                                                    <div class="cInfo">
+                                                        <input id="articleTitle" name="blog_title" type="text" size="96" class="Fm_input1" value="欢迎您在新浪博客安家"/>
+                                                    </div>
+                                                    <div class="timing">
+                                                        <div id="timeTips" class="tag_tx">&nbsp;&nbsp;&nbsp;&nbsp;时间:&nbsp;2018-08-27&nbsp;21:57:56&nbsp;&nbsp;</div>
+                                                        <div class="cInfo" style="display:none">
+                                                            <a href="javascript:;" id="setPubTime" class="editBtn1"><cite>设置定时</cite></a><a href="http://help.sina.com.cn/index.php?s=comquestiondetail&a=view&id=1288" target="_blank"><img align="absmiddle" src="http://simg.sinajs.cn/blog7style/images/common/editor/ico_help.jpg"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="SinaEditor" class="SinaEditor">
+                                            <!-- 简版工具条 -->
+                                            <div class="base_tools">
+                                                <div class="base_tools_opacity" id="base_tools">
+
+
+                                                </div>
+                                                <div class="ChangeOpt"><a id="SinaEditor_Prolink" href="javascript:void(0);" unselectable="on" onclick="return false;">切换到更多功能</a></div>
+                                            </div>
+                                            <!-- 专业工具条 -->
+                                            <div class="pro_tools" style="display: none;">
+                                                <div class="pro_tools_opacity" id="pro_tools">
+
+                                                </div>
+                                                <div class="ChangeOpt"><a id="SinaEditor_Baselink" href="javascript:void(0);" unselectable="on" onclick="return false;">切换到简单功能</a></div>
+                                            </div>
+                                            <div class="EditorContent">
+                                                <div class="EditorBoxLeft">
+                                                    <div class="main_top"></div>
+
+                                                    <div class="main_middle">
+                                                        <div id="SinaEditor_Textarea">
+                                                            <textarea name="blog_body" id="SinaEditorTextarea" class="textarea" style="border:0px none;display:none;">
+                                                            <P>亲爱的朋友：</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;欢迎您在新浪博客安家，您的博客地址是：<U><A href="http://blog.sina.com.cn/u/1810576043" target=_blank><FONT color=#0000ff>http://blog.sina.com.cn/u/1810576043</FONT></A></U></P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;您可以用文字、图片、视频记录和展示最真实的自我，与网友交流，与线上好友聊天，还能通过手机发表博文和上传图片，随时随地记录心情和身边趣闻。</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;我们为您提供了丰富的炫酷模板来装点您在网上的家园，强大的音乐播放功能更能陪伴您的网络生活。准备好了吗？现在就开始精彩的博客之旅！</P>
+                                                            <DIV style="DISPLAY: block; MARGIN: 0px auto; TEXT-ALIGN: center"><A href="http://control.blog.sina.com.cn/admin/article/article_add.php" target=_blank><IMG src="http://simg.sinajs.cn/blog/images/newblog01.jpg"></A> <A href="http://photo.blog.sina.com.cn/upload/upload.php" target=_blank><IMG src="http://simg.sinajs.cn/blog/images/newblog04.jpg"></A> <A href="http://vupload.you.video.sina.com.cn/u.php?m=1" target=_blank><IMG src="http://simg.sinajs.cn/blog/images/newblog02.jpg"></A> <A href="http://news.sina.com.cn/437/2008/0703/24.html" target=_blank><IMG src="http://simg.sinajs.cn/blog/images/newblog08.jpg"></A> <A href="http://music.sina.com.cn/m/$this->uid" target=_blank><IMG src="http://simg.sinajs.cn/blog/images/newblog03.jpg"></A> </DIV><P>&amp;nbsp;</P><P>温馨提示：</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;只需一步您就可以把现有MSN SPACES、搜狐或网易的博客内容备份到新浪，<A href="http://control.blog.sina.com.cn/admin/blogmove/index.php" target=_blank><FONT color=#0000ff>现在就去搬家</FONT></A></P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<U><A href="http://news.sina.com.cn/437/2008/0703/24.html" target=_blank><FONT color=#0000ff>绑定手机博客</FONT></A></U>，只要您的手机可以上网，就可以第一时间浏览他人的博客或者更新您自己的博客，您用手机更新的博客可以同时显示在互联网上</P><P>这样做您的博客会受到更多的关注：</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;装饰个性博客，看看<U><A href="http://blog.sina.com.cn/lm/help/2009/index.html?id=26#1" target=_blank><FONT color=#0000ff>如何换上炫酷模板</FONT></A></U>？</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;完善个人资料，<U><A href="http://control.blog.sina.com.cn/blogprofile/nick.php" target=_blank><FONT color=#0000ff>上传靓照</FONT></A></U>当头像</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;随便逛逛，点击屏幕右上方的<U><A href="http://blog.sina.com.cn/lm/help/2009/index.html?id=27#6" target=_blank><FONT color=#0000ff>随便逛逛</FONT></A></U>，看看邻居的观点，留下您的宝贵评论</P><P>&amp;nbsp;</P><P>还想了解更多，欢迎<U><A href="http://blog.sina.com.cn/lm/help/2009/index.html" target=_blank><FONT color=#0000ff>去帮助中心</FONT></A></U>找答案。也可以到<U><A href="http://blog.sina.com.cn/" target=_blank><FONT color=#0000ff>博客首页</FONT></A></U>浏览大事小情。</P><P>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; <U><A href="http://blog.sina.com.cn/blog" target=_blank><FONT color=#0000ff>新浪官博</FONT></A></U></P>
+                                                            </textarea>
+                                                        </div>
+                                                        <div id="SinaEditor_Iframe">
+                                                            <iframe class="iframe"></iframe>
+                                                        </div>
+                                                    </div>
+                                                    <div class="main_foot">
+                                                        <div class="leftFoot">
+                                                            <input type="checkbox" id="SinaEditor_59_viewcodecheckbox" disabled="disabled"/>
+                                                            <label for="SinaEditor_59_viewcodecheckbox">显示源代码</label>
+                                                        </div>
+                                                        <div class="rightFoot"><a href="javascript:void(0);" onclick="return false;">
+                                                                <div id="SinaEditor_59_viewAreaDIV" class="over"> </div>
+
+                                                                <span id="height_mode">扩大编辑区域</span></a></div>
+                                                    </div>
+                                                    <img id="SinaEditor_59_ie_rsave" style="width: 1px; display: none;"/>
+
+                                                </div>
+                                                <div class="EditorBoxRight" id="editor_box_right">
+													<div class="check" id="jf_check">
+														<a href="" class="checkbtn">签到领积分<!--已签到<span>＋1分--></span></a>
+														<p>连续签到可领取更多积分<!--已连续签到<span>2</span>天，继续可获得更多积分--><a href="">详情</a></p>
+													</div>
+                                                    <div class="module_1" id="shortcut">
+                                                        <h2 class="hB"><a href="javascript:void(0)" onclick="return false;"><span>常用功能</span></a></h2>
+                                                        <div style="" class="bR_info" id="shortcut_content">
+                                                        </div>
+                                                    </div>
+                                                    <!--
+                  <div class="module_2 down" id="insert_template">
+                    <h2><a href="javascript:void(0);" onclick="return false;"><span>插入模板</span></a></h2>
+                    <div class="bR_info" id="insert_template_content">
+                    </div>
+                  </div>
+                  -->
+                                                    <div class="module_3">
+                                                        <h2><a href="http://control.blog.sina.com.cn/blog_rebuild/blog/controllers/articlelist.php?uid=1810576043&status=7" target="_blank"><span>定时发布</span></a></h2>
+                                                        <h2><a href="http://control.blog.sina.com.cn/blog_rebuild/blog/controllers/articlelist.php?uid=1810576043&status=3" target="_blank"><span>草稿箱</span></a></h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+              
+                                        <div class="clearit"></div>
+
+                                        <div class="insetMediaInfo" id="addWrap" style="display:none">
+                                            <div class="iItit">
+                                                <span class="leftBox">插入的内容：</span>
+                                                <div class="tabTit" id="addTab">
+                                                </div>
+                                            </div>
+                                            <div class="iIconn" >
+                                                <div class="iIconnBg1"></div>
+                                                <div class="iIconnBg2">
+                                                    <!-- 背景音乐 -->
+                                                    <div class="myMusic" id="addMusic" style="display:none">
+                                                        <table border="0" cellspacing="0" cellpadding="0">
+                                                            <thead id="music_thead">
+                                                                <tr>
+                                                                    <th>音乐地址：</th>
+                                                                    <td><input id="music_input" type="text" class="Fm_input2" value="" /></td>
+                                                                    <td width="100"><a class="SG_aBtn SG_aBtnB" href="javascript:void(0);"><cite id="music_add">添加</cite></a></td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="music_body">
+                                                                <tr>
+                                                                    <td colspan="2"><div class="flashmusic" id="music_flash"></div></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!-- 插入投票 -->
+                                                    <div class="myVote" id="addVote" style="display:none">
+
+
+                                                    </div>
+                                                    <!-- 相关文章 -->
+                                                    <div class="myArtical" id="article_associate" style="display:none">
+                                                    </div>
+                                                    <div class="clearit"></div>
+                                                </div>
+                                                <div class="iIconnBg3"></div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="fWrap">
+                                            <ul>
+                                                <li class="li1"><span class="cTit">分类：</span>
+                                                    <div class="cInfo">
+                                                        <select id="componentSelect" name="blog_class" class="sel inputWidth" style="height:24px; line-height:24px;">
+                                                            <option value="00">选择分类</option><option value="0" >私密博文</option>
+                                                        </select>
+                                                        <a href="javascript:void(0);" id="cateManageLink" class="ATextLine" onclick="return false;">创建分类</a></div>
+                                                </li>
+                                                <li><span class="cTit">标签：</span>
+                                                    <div class="cInfo">
+                                                        <input name="tag" id="articleTagInput" type="hidden" value="" autocomplete="off" />
+                                                        <div id="tInputContainer" class="Fm_input3"><em>填写标签，让更多人看到你的博文</em><input id="tInput"/></div> 
+                                                        <a style="display:none"><cite id="articleTagAutoSub">自动匹配标签</cite></a>
+                                                    </div>
+                                                    <div class="blogTs blogTs_tit" id="articleTagList" >
+                                                        <div class="closex"><a href="javascript:void(0);" id="tagListClose" title="关闭" onclick="return false;">×</a></div>
+                                                        <div class="ts">标签间请用“空格”或“逗号”隔开，最多可添加5个标签。</div>
+                                                        <table class="blogTsTbl">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>常用标签：</th>
+                                                                    <td id="hotTagList"></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>推荐标签：</th>
+                                                                    <td id="userTagList"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </li>
+                                                <li class="li2"><span class="cTit">设置：</span>
+                                                    <div class="cInfo">
+                                                        <input type="radio" name="x_cms_flag"  checked     value="0" id="commentRadio1" />
+                                                               <label for="commentRadio1">允许所有人评论</label>
+                                                            <!--<input type="radio" name="x_cms_flag"     value="1" id="commentRadio2" />
+                                                                   <label for="commentRadio2">不允许匿名评论</label>-->
+                                                                <input type="radio" name="x_cms_flag"    value="2" id="commentRadio3" />
+                                                                       <label for="commentRadio3">不允许评论</label>
+                                                                    <br/>
+                                                                    <input  name="x_rank" value="1" id="xRankRadio" type="checkbox" />
+                                                                        <label for="xRankRadio">文章仅自己可见</label>
+
+                                                                        <input   name="x_quote_flag" value="1" id="QuoteRadio" type="checkbox"  />
+                                                                            <label for="QuoteRadio">禁止转载</label><a class="ATextLine" target="_blank" href="http://control.blog.sina.com.cn/blogprofile/profilepower.php">全局权限管理</a>
+
+                                                                            </div>
+                                                                            </li>
+
+                                                                            <li class="btn" style="display:none">
+                                                                                <a href="javascript:void(0);" class="editBtn1"  onclick="return false;"><cite id="articlePreviewBtn">预览博文</cite></a>&nbsp;&nbsp;
+                                                                                <a href="javascript:void(0);" class="editBtn1"  onclick="return false;"><cite id="articlePosTempBtn" ></cite></a></li>
+                                                                       
+                                                                            <!--<li class="liText12" style="display:none">
+                                                                            <input name="is2bbs" id="input1" type="checkbox" value="1" checked="checked" />
+                                                                                        <strong><label for="input1">投稿到博论坛：</label></strong><span class="CP_pgttl">让更多论坛网友与您交流。</span></li>
+                                                                            <li class="liText12" style="display:none">
+                                                                                <input name="join_circle" id="input2" type="checkbox" value="1"  />
+                                                                                   <strong><label for="input2">投稿到参与的圈子：</label></strong><span class="CP_pgttl">让您的圈友分享您的文章。</span></li>-->
+
+                                                                            <li class="liText12">同步：<a id="bindtomsn" href="javascript:void(0)" class="editorTb"><img width="24" height="24" align="absmiddle" title="同步Windows Live" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="editls editls02">同步<span class="cor2">Windows Live</span></a> <a id="bindtot" href="javascript:void(0);" class="editorTb"><img width="24" height="24" align="absmiddle" title="同步到新浪微博" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="editls editls01">同步到<span class="cor1">新浪微博</span></a> <a onclick="v7sendLog && v7sendLog('27_01_02_uid')"
+ href="http://control.blog.sina.com.cn/blog_rebuild/profile/controllers/bindwemeet.php" target="_blank" class="editorTb"><img width="19" height="19" align="absmiddle" title="同步到微米" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" class="editls editls03">同步到<span class="cor3">微米</span></a></li>
+                                                                            <li class="btn" style="display:none"><a href="javascript:void(0);" class="editBtn2" onclick="return false;"><cite  id="articlePostBtn">&nbsp;&nbsp;保存修改&nbsp;&nbsp;</cite></a></li>
+                                                                            <li class="btn">
+                                                                                <a href="javascript:void(0);" id="articleSaveBtn2" class="editBtn1" onclick="return false;"><cite id="articleSaveBtn">保存修改</cite></a>&nbsp;&nbsp;
+                                                                                <a href="javascript:void(0);" id="articlePreviewBtnB2" class="editBtn1" onclick="return false;"><cite id="articlePreviewBtn2">预览博文</cite></a>
+                                                                            </li>
+                                                                            </ul>
+                                                                            </div>
+                                                                            </div>
+                                                                            <!-- 内容结束 -->
+                                                                            </form>
+                                                                            </div>
+                                                                            <div class="SG_connFoot"></div>
+                                                                            </div>
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class="sinablogfooter">
+                                                                                <p class="SG_linka"><a href="http://control.blog.sina.com.cn/admin/advice/advice_list.php" target="_blank">新浪BLOG意见反馈留言板</a>　电话：4006900000 提示音后按1键（按当地市话标准计费）　欢迎批评指正</p>
+                                                                                <p class="SG_linka"><a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/" target="_blank">About Sina</a> | <a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml" target="_blank">网站律师</a> | <a href="http://english.sina.com" target="_blank">SINA English</a> | <a href="http://members.sina.com.cn/apply/" target="_blank">注册通行证</a> | <a href="http://help.sina.com.cn/" target="_blank">产品答疑</a> </p>
+                                                                                <p class="copyright SG_linka"> Copyright &copy; 1996 - 2018 SINA Corporation,  All Rights Reserved</p>
+                                                                                <p class="SG_linka"> 新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+                                                                            </div>
+                                                                            </div>
+                                                                            </div>
+                                                                            </body>
+                                                                            <script type="text/javascript">
+                                                                                var scope = {
+                                                                                    $uid : "1810576043",
+                                                                                    $needbind: "1",
+                                                                                    $uhost : "",
+                                                                                    $PRODUCT_NAME : "blog7",        //blog7photo,blog7icp
+                                                                                    $pageid : "editor",
+                                                                                    $setDomain : false,
+                                                                                    $is_photo_vip : 1,
+                                                                                    $user_channel : 0,
+                                                                                    $topic_channel : 0,
+                                                                                    $topic_id : 0,
+                                                                                    $newFontFamily : 1,
+                                                                                    $private : {"pageset":0,"tj":0,"adver":0,"sms":0,"ad":0,"blogsize":0,"cms":0,"hidecms":0,"top":0,"invitationset":0,"p4p":0,"spamcms":0,"init7":1,"quote":0,"foot":0,"headpic":0,"isMsnLink":0,"msnfeed":"000","isMsnMove":0,"isprivate":0,"articleclass":"117"},
+                                                                                    $ssoUseUrl : "0",	
+										    $UA:"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0"
+                                                                                };
+                                                                                var __SINAPRO__ = "";
+                                                                                var $pic_encrypt = "iGBrHmZrmf_vr=MBccYol_GcHGHMfGl-ml_Dl&c=fGBGNrBr_lrN";
+
+                                                                                var articleEditorCFG = {
+                                                                                    /**
+                                                                                     * 系统提供的Tag分类
+                                                                                     * user为用户使用过的tag列表
+                                                                                     * hot为系统提供的热门tag列表
+                                                                                     * {Object}
+                                                                                     *  {Array}
+                                                                                     *  {Array}
+                                                                                     */
+                                                                                    articleAllTagList: {
+                                                                                        user: ["教育", "娱乐"],
+                                                                                        hot: [{label:"高考", link: "http://blog.sina.com.cn/lm/hotrank/161.html"},{label:"欧洲杯", link: "http://blog.sina.com.cn/lm/hotrank/162.html"},{label:"奥运会", link: "http://blog.sina.com.cn/lm/hotrank/164.html"}],
+                                                                                        tag_Recommend:["奥运会", "暴雨", "高考", "月薪", "油价", "房价"],
+                                                                                        newhot:[{"title":"\u6614\u65e5\u7684\u201c\u6563\u7247\u201d\u8bb0\u5f55","presetTag":"Qing\u8bdd\u9898  \u6563\u7247"}],
+																						hotTagNick:['育儿','娱乐','星座','文化','体育','时尚','情感','汽车','美食','旅游','军事','教育','健康','股票','房产','财经','历史','收藏','时评','佛学','图片','IT'],
+																						hotTagNum:{'育儿':'125','娱乐':'105','星座':'131','文化':'102','体育':'104','时尚':'134','情感':'149','汽车':'130','美食':'108','旅游':'127','军事':'116','教育':'122','健康':'141','股票':'111','房产':'129','财经':'153','历史':'117','收藏':'117','时评':'117','佛学':'117','图片':'117','IT':'113'}
+                                                                                    },
+                                                                                    servertime: "1535421274",
+                                                                                    /**
+                                                                                     * 本篇文章的tag列表
+                                                                                     * {String}
+                                                                                     */
+                                                                                    articleTagList: "",
+                                                                                    tagPostURL: "http://interface.blog.sina.com.cn/api/get_blog_tag.php",
+                                                                                    articlePreviewURL: "http://control.blog.sina.com.cn/myblog/htmlsource/article_preview.php",
+                                                                                    // 新发->草稿
+                                                                                    articlePostTempURL: "http://control.blog.sina.com.cn/admin/article/article_edit_post.php?act=3",
+                                                                                    // 新发->发表
+                                                                                    // 编辑->保存
+                                                                                    articlePostURL: "http://control.blog.sina.com.cn/admin/article/article_edit_post.php",
+                                                                                    // 编辑草稿->草稿
+                                                                                    articleEditPostTempURL: "http://control.blog.sina.com.cn/admin/article/article_edit_post.php?act=3",
+                                                                                    // 编辑草稿->发表
+                                                                                    articleEditPostURL: "http://control.blog.sina.com.cn/admin/article/article_edit_post.php",
+                                                                                    articleStatus: "2",
+                                                                                    worldcupPics: 0,
+                                                                                    articleAssociate: {"total":1,"cates":{"32768":{"count":0,"name":"\u8d2d\u559c\u6b22","id":"32768"}}},
+                                                                                    articleAssociateHistory: [],
+                                                                                    articleBGMHistory: '',
+                                                                                    articlevData: null,
+                                                                                    articleActivity: null,
+                                                                                    articleClassID: null
+
+                                                                                };
+                                                                            </script>
+                                                                            <script type="text/javascript" src="http://sjs.sinajs.cn/blog7common/js/boot.js"></script>
+                                                                            <script type="text/javascript">__load_js();</script>
+                                                                            <script type="text/javascript">__render_page();</script>
+                                                                            <script src="http://a.tbcdn.cn/apps/top/x/sdk.js?appkey=21297358"></script>
+                                                                            <script type="text/javascript" src="http://sjs.sinajs.cn/xblogtheme/js/blog680-min.js"></script>
+<script type="text/javascript">
+        var slotArr = ['loginBarActivity']; //广告位id
+        var sourceArr = ['SLOT_43,SLOT_47,SLOT_48'];  //广告资源id
+        SinaBlog680.staticBox(slotArr, sourceArr);
+</script>
+</html>

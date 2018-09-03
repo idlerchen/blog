@@ -1,0 +1,12 @@
+package com.fenbi.blog.dao;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Comment;
+
+public interface CommentDao {
+	
+	//获取某个博文的评论
+	List<Comment> getCommentByBlogid(String blogid);
+
+}

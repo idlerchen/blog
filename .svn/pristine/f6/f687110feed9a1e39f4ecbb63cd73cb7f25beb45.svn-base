@@ -1,0 +1,56 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fenbi.blog.bean.User;
+import com.fenbi.blog.bean.UserType;
+import com.fenbi.blog.service.UserTypeService;
+import com.fenbi.blog.service.impl.UserTypeServiceImpl;
+
+public class UsertypeServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+	UserTypeService uts = new UserTypeServiceImpl();
+
+	public void saveUsertype(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String usertypeName = request.getParameter("name");
+		User user = (User) request.getSession().getAttribute("loginUser");
+		
+		UserType ut = new UserType();
+		ut.setName(usertypeName);
+		if(user!=null) {
+			ut.setUserid(user.getId());
+		}
+		
+		int saveUsertype = uts.saveUsertype(ut);
+		//结果处理
+	}
+
+	public void getUsertype(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User user = (User) request.getSession().getAttribute("loginUser");
+		
+		List<UserType> usertype = uts.getUsertypeByUserid(user.getId());
+		
+		//处理结果
+	}
+	
+	public void updateUsertype(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("usertypeid");
+		String name = request.getParameter("name");
+		int updateUsertype = uts.updateUsertype(name, id);
+		//处理结果
+	}
+	
+	public void delUsertype(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("usertypeid");
+		int delUsertype = uts.delUsertype(id);
+		
+		//处理结果
+	}
+
+}

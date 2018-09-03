@@ -1,0 +1,17 @@
+package com.fenbi.blog.dao.impl;
+
+import com.fenbi.blog.bean.Blog;
+import com.fenbi.blog.dao.BaseDao;
+import com.fenbi.blog.dao.BlogDao;
+
+public class BlogDaoImpl extends BaseDao<Blog> implements BlogDao {
+
+	@Override
+	public int saveBlog(Blog blog) {
+		String sql = "INSERT INTO blog(userid,title,content,define_type,blog_type,comment_num,like_num) "
+				+ "VALUES(?,?,?,?,?,?,?)";
+		return this.update(sql, blog.getUserid(),blog.getTitle(),blog.getContent(),blog.getDefineType(),
+				blog.getBlogType(),blog.getCommentNum(),blog.getLikeNum());
+	}
+
+}

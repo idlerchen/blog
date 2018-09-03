@@ -1,0 +1,34 @@
+package com.fenbi.blog.dao;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Blog;
+
+public interface BlogDao {
+	//插入博文
+	int saveBlog(Blog blog);
+	
+	//获取所有博文
+	List<Blog> getAllBlog();
+	
+	//根据博文类型获取博文
+	List<Blog> getBlogByBlogtype(String blogtype);
+	
+	//根据用户获取博文
+	List<Blog> getBlogByUserid(int userid);
+	
+	//修改-编辑博文
+	int updateBlog(Blog	blog);
+	
+	//删除博文
+	int delBlog(String blogid);
+	
+	//搜索-根据博客标题查找博客
+	List<Blog> getBlogByblogtitle(String title);
+	
+	//获取前5个热度最高博文-like_num倒序，取前五个
+	List<Blog> getBlogBylikeNum();
+
+	//获取某个博文的详情
+	Blog getBlogByblogid(String blogid);
+}

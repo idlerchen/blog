@@ -1,0 +1,21 @@
+package com.fenbi.blog.dao;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.UserType;
+
+public interface UserTypeDao {
+	
+	/*
+	 * @Description:插入用户自定义分类 
+	* @param usertype 封装的usertype信息
+	* @return: 是否插入成功
+	 */
+	int saveUsertype(UserType usertype);
+	
+	/*
+	 * 获取所有的usertype分类
+	 */
+	List<UserType> getUsertype();
+
+}

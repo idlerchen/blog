@@ -1,0 +1,30 @@
+package com.fenbi.blog.service.impl;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Comment;
+import com.fenbi.blog.dao.CommentDao;
+import com.fenbi.blog.dao.impl.CommentDaoImpl;
+import com.fenbi.blog.service.CommentService;
+
+public class CommentServiceImpl implements CommentService{
+
+	CommentDao cd = new CommentDaoImpl();
+	@Override
+	public List<Comment> getCommentByBlogid(String blogid) {
+		
+		return cd.getCommentByBlogid(blogid);
+	}
+	
+	@Override
+	public int delComment(String commentId) {
+		
+		return cd.delComment(commentId);
+	}
+
+	@Override
+	public int saveComment(Comment comment) {
+		
+		return cd.saveComment(comment);
+	}
+}

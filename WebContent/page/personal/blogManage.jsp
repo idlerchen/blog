@@ -1,0 +1,274 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人博客管理</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,chrome=1" />
+<link rel="pingback" href="http://upload.move.blog.sina.com.cn/blog_rebuild/blog/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://upload.move.blog.sina.com.cn/blog_rebuild/blog/xmlrpc.php?rsd" />
+<link href="http://blog.sina.com.cn/blog_rebuild/blog/wlwmanifest.xml" type="application/wlwmanifest+xml" rel="wlwmanifest" />
+<link rel="alternate" type="application/rss+xml" href="http://blog.sina.com.cn/rss/1810576043.xml" title="RSS" />
+<link href="http://simg.sinajs.cn/blog7style/css/conf/blog/articlelistM.css" type="text/css" rel="stylesheet" /><style id="tplstyle" type="text/css">@charset "utf-8";@import url("http://simg.sinajs.cn/blog7newtpl/css/30/30_1/t.css");
+</style>
+<style id="positionstyle"  type="text/css">
+</style>
+<style id="bgtyle"  type="text/css">
+</style>
+<style id="headtyle"  type="text/css">
+</style>
+<style id="navtyle"  type="text/css">
+</style>
+<script type="text/javascript" src="/blog/js/jquery-1.11.1.js" ></script>
+<script type="text/javascript" src="/blog/myjs/blogManage.js" ></script>
+</head>
+<body>
+<!--$sinatopbar-->
+<div style="z-index:512;" class="nsinatopbar">
+  <div style="position:absolute;left:0;top:0;" id="trayFlashConnetion"></div>
+  <div class="ntopbar_main"> 
+    <div class="ntopbar_loading"></div>
+     <div id="_1121535640331686_panel" class="ntopbar_login" style="" login="1"><span class="link bk_home">
+     <a href="/blog/first.jsp" target="_blank" suda-uatrack="key=sinahome_from_blog&amp;value=sinahome_from_blogpage"><i class="SG_bkhome"></i>新浪首页</a></span>
+    <c:if test="${empty loginUser }">
+	     <a class="login" href="/blog/page/user/login.jsp"><span>登录</span></a>
+	     <a class="register" href="/blog/page/user/register.jsp">注册</a>
+ 	</c:if>
+ 	 <c:if test="${!empty loginUser }">
+		<a class="register" href="/blog/UserServlet?method=toPersonalCenter">用户：${loginUser.username }</a>
+		<a class="register" href="UserServlet?method=logout">|&nbsp;退出</a>
+	</c:if>
+	</div></div>
+ </div>
+<!--$end sinatopbar-->
+
+<div class="sinabloga" id="sinabloga">
+	<div id="sinablogb" class="sinablogb">
+
+	   
+ <div id="sinablogHead" class="sinabloghead">
+     <div style="display: none;" id="headflash" class="headflash"></div>
+	   <div id="headarea" class="headarea">
+      <div id="blogTitle" class="blogtoparea">
+      <h1 id="blogname" class="blogtitle"><a href="/blog/page/personal/personalCenter.jsp">用户:${loginUser.username }的博客</a></h1>
+	  		
+		<div id="bloglink" class="bloglink"><a href="/blog/page/personal/personalCenter.jsp">http://blog.fenbi.com.cn/u/${loginUser.username }</a> </div>
+      </div>
+      <div class="blognav" id="blognav">
+      			  <div id="blognavBg" class="blognavBg"></div> <div class="blognavInfo"> 
+		<span><a href="/blog/BlogServlet?method=getAllBlog">首页</a></span>
+      <span><a class="on" href="/blog/BlogServlet?method=getBlogtoManage">博文目录</a></span>
+      <span><a href="/blog/page/personal/writeBlog.jsp">发文</a></span>
+      <span class="last"><a  href="UserServlet?method=toPersonalCenter">个人中心</a></span></div>
+      </div>      		
+       <div class="autoskin" id="auto_skin">
+       </div>
+
+<div class="adsarea">
+     <a href="#"><div id="template_clone_pic" class="pic"></div></a>
+     <div id="template_clone_link" class="link wdc_HInf"></div>
+     <div id="template_clone_other" class="other"></div>        
+</div>
+    </div>
+    </div>
+    
+    <!--主题内容开始 -->
+    <div class="sinablogbody" id="sinablogbody">
+		
+	<!--第一列start-->
+    <div id="column_1" class="SG_colW21 SG_colFirst"><div id="module_7" class="SG_conn">
+  <div class="SG_connHead">
+  <span comp_title="博文" class="title">博文</span>
+ <%--  <span class="edit">
+	 <a class="CP_a_fuc" href="javascript:;" onclick="return false;">[<cite>管理</cite>]</a>  </span>  --%>
+	 
+	  <span class="edit" id="manage">[<cite>管理</cite>]</span> 
+	 <!-- 管理按钮的事件区，对自定义分类的增删改查 -->
+	 <table id="_6831535773546872_panel"  class="CP_w" style="left: 698px; top: 114.8967px; z-index: 5000; position: fixed; opacity: 1; display:none">
+		 <thead id="_6831535773546872_titleBar" style="cursor: move; -moz-user-select: none;">
+		 <tr><th class="tLeft"><span></span></th><th class="tMid"><div class="bLyTop"><strong id="_6831535773546872_titleName">分类管理</strong>
+		 <cite id="_6831535773546872_btnClose">X</cite></div></th><th class="tRight"><span></span></th></tr></thead><tfoot>
+		 <tr><td class="tLeft"><span></span></td><td class="tMid"><span></span></td><td class="tRight"><span></span></td></tr></tfoot>
+		 
+		 <tbody>
+		 <tr><td class="tLeft"><span></span></td><td class="tMid" id="_6831535773546872_content" style="width: 492px;"><div style="width: 492px; height: px;" id="category_75521535773546871"><div id="categoryBody"><div id="categoryTitle"></div>
+		 <div id="categoryHead">
+	 	<table><tbody>
+	 		<tr><td>
+	 		<input maxlength="28" placeholder="最多可输入14个中文字符" id="categoryName" type="text"></td>
+	 		<td width="80"><a id="categoryCreate"  class="SG_aBtn SG_aBtnB SG_aBtn_sub"><cite>创建分类</cite></a></td>
+	 		<td><span class="SG_txtc">请用中文、英文或数字。</span></td></tr></tbody>
+	 	</table>
+		 <div id="errTips"></div></div>
+		 
+		 <form method="post" id="categoryForm" name="form">
+		 <div id="categoryList">
+		 <ul class="clearfix" id="datalist">
+		 <c:forEach items="${usertypes }" var="usertype">
+			 <li style="height: 30px;" class="li">
+			 	<span class="htit" style="color:#000000" >${usertype.name }</span>
+			 	<input class="htit"  value="${usertype.name }" style="display:none" />
+				 <span  class="control">
+					 <span class="update"  data-id=${usertype.id }>[<cite>编辑</cite>]</span>
+					 <span class="delete"  data-id=${usertype.id }>[<cite>删除</cite>]</span>
+				 </span>
+				  <span  class="control" style="display:none">
+					 <span class="confirm" data-id=${usertype.id }>[<cite>确定</cite>]</span>
+					 <span class="cancel">[<cite>取消</cite>]</span>
+				 </span>
+			</li>
+		</c:forEach>
+		 </ul>
+		 <div class="SG_j_linedot"></div></div>
+		 
+		 <div id="categoryBottom" style="text-align:center">
+		 <a id="categorySave"  class="SG_aBtn SG_aBtnB SG_aBtn_sub">
+		 <cite>保存设置<input value="保存设置" type="button"></cite></a></div>
+		 </form></div></div></td><td class="tRight"><span></span></td></tr>
+		 </tbody>
+		 
+	 </table>
+	 
+  </div>
+  <div class="SG_connBody">
+  			<div class="menuList blog_classList">			
+				<ul><li class="${param.usertypeId==null ? 'current' : '' }"><div class="menuCell_main"><span class="SG_dot">
+				<a class="on" href="/blog/BlogServlet?method=getBlogtoManage"><strong>全部博文</strong></a></span></div>         
+				<div class="menuCell_bot"></div> </li></ul>  
+			  
+			  <div class="SG_j_line"></div>
+			  	<ul>
+			  	<c:forEach items="${usertypes }" var="usertype">
+				  	<li class="${usertype.id==param.usertypeId ? 'current' : '' }"><div class="menuCell_main"><span class="SG_dot">
+				  		<a href="/blog/BlogServlet?method=getBlogByUserTypeId&usertypeId=${usertype.id }">${usertype.name }</a></span></div> <div class="menuCell_bot"></div>
+				  	</li>			
+			  	</c:forEach>	
+				</ul>
+				<div class="SG_j_line"></div>
+				<ul>
+			  <li ><div class="menuCell_main"><span class="SG_dot"><a href="http://control.blog.sina.com.cn/blog_rebuild/blog/controllers/articlelist.php?uid=1810576043&status=3" >草稿箱</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li><li ><div class="menuCell_main"><span class="SG_dot"><a href="http://control.blog.sina.com.cn/blog_rebuild/blog/controllers/articlelist.php?uid=1810576043&p=1&status=7" >定时发布</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li><li ><div class="menuCell_main"><span class="SG_dot"><a href="http://control.blog.sina.com.cn/blog_rebuild/blog/controllers/articlelist.php?uid=1810576043&status=0" >回收站</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li>				
+				</ul>
+				<div class="SG_j_line"></div>
+							  <ul>
+			  			<li ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/favourites_1810576043_1.html"  >博文收藏</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li>			  
+			  </ul>
+			</div>
+	  </div>
+  <div class="SG_connFoot"></div>
+</div>
+              <div class="SG_conn" id="module_800">
+                    <div class="SG_connHead"> <span class="title">特色博文</span> <span class="edit"></span> </div>
+                    <div class="SG_connBody"> 
+                    <div class="menuList blog_classList">
+            <ul>
+
+              <li ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/article_film_1810576043_1.html" >影评博文</a><em>(0)</em></span></div> <div class="menuCell_bot"></div></li><li ><div class="menuCell_main"><span class="SG_dot"><a href="http://blog.sina.com.cn/s/art365list_1810576043_2018_08.html" >365</a><em>(0)</em><img class="SG_icon SG_icon11" src="http://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" width="15" height="15" title="新" align="absmiddle" /></span></div> <div class="menuCell_bot"></div></li>  
+
+            </ul>
+                        </div>
+                    </div>
+                    <div class="SG_connFoot"></div>
+                </div><div id="module_929" class="SG_conn">
+     <div class="SG_connHead">
+            <span comp_title="搜博主文章" class="title">搜博主文章</span>
+            <span class="edit"></span>
+     </div>
+     <div class="SG_connBody">
+        <div class="searchAtc_blk">
+        <form method="get" onsubmit="if(document.getElementById('keyword').value==''){return false;}" action="http://control.blog.sina.com.cn/search/search.php" id="authorSelfSearch">
+			<input type="hidden" value="1810576043" name="uid">
+			<input type="hidden" value="1" name="page">
+			<div>
+			<input type="text" value="" id="keyword" name="keyword" class="SG_input" maxlength="50"><a onclick="if(document.getElementById('keyword').value.replace(/(^[\s　]*)|([\s　]*$)/g, '')!=''){document.getElementById('authorSelfSearch').submit();return false;}" class="SG_aBtn SG_aBtnB" href="javascript:;"><cite>搜索</cite></a>
+			</div>
+		</form>
+		<div class="clearit"></div>
+     	</div>
+      </div>       
+      <div class="SG_connFoot"></div>
+</div><div class="SG_conn" id="module_931">
+            <div class="SG_connHead">
+            <span class="title" comp_title="归档">归档</span>
+            
+            <span class="edit"></span>
+            </div>
+            <div class="SG_connBody">
+            	<div class="menuList blog_classList"><ul id="menuList blog_classList"><div><center>内容读取中…</center></div></ul></div>
+
+            </div>       
+            <div class="SG_connFoot"></div>
+ </div>
+
+</div>
+	<!--第一列end-->
+	
+	<!--第二列start-->
+	<div id="column_2" class="SG_colW73"><div id="module_928" class="SG_conn">
+            <div class="SG_connHead">
+            <span comp_title="全部博文<em>(1)</em>" class="title">全部博文</span>
+                        <span class="edit"> </span>
+            </div>
+            <div class="SG_connBody">
+            	<div class="article_blk">
+
+		<div class="articleList">
+		<c:forEach items="${blogs }" var="blog">						
+		<!-- 列表 START -->
+		<div class="articleCell SG_j_linedot1">
+			<p class="atc_main SG_dot">
+				<span class="atc_ic_f"></span>
+				<span class="atc_title">
+					<a title="" target="_blank" href="BlogServlet?method=getMyBlogByBlogid&blogid=${blog.id }">${blog.title }</a>
+				</span> 
+				<span class="atc_ic_b"></span>
+			</p>
+			<p class="atc_info">
+				<span class="atc_tm SG_txtc">${blog.createTime }</span>
+				<span class="atc_set">
+					<a class="CP_a_fuc" href="BlogServlet?method=getBlogtoUpdate&blogid=${blog.id }" target="_blank">[<cite>编辑</cite>]</a>
+					<select class="userType" data-id=${blog.id }>
+						<option>修改分类</option>
+					</select>
+					<a class="CP_a_fuc" href="BlogServlet?method=deleteBlog&blogid=${blog.id }">删除</a>
+				</span>
+			</p>
+		</div>
+		<!-- 列表END -->
+		</c:forEach>
+		</div>
+				<div class="SG_page">
+				<ul class="SG_pages"></ul>
+			</div>
+		</div>
+				<div class="SG_connFoot"></div>
+            </div>       
+            
+          </div></div>
+	<!--第二列start-->
+	
+	<!--第三列start-->
+	<div id="column_3" class="SG_colWnone"><div style="width:0px;height:0.1px;margin:0px;">&nbsp;&nbsp;</div></div>
+	<!--第三列end-->
+
+	
+    </div>
+   <!--主题内容结束 -->
+  
+
+	<div id="diggerFla" style="position:absolute;left:0px;top:0px;width:0px"></div>
+    <div class="sinablogfooter" id="sinablogfooter"  style="position:relative;">
+      
+      <p class="SG_linka"><a href="http://help.sina.com.cn/" target="_blank">新浪BLOG意见反馈留言板</a>　电话：4006900000 提示音后按1键（按当地市话标准计费）　欢迎批评指正</p>
+   
+      <p class="SG_linka"><a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/" target="_blank">About Sina</a> | <a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml" target="_blank">网站律师</a> | <a href="http://english.sina.com" target="_blank">SINA English</a> | <a href="http://members.sina.com.cn/apply/" target="_blank">会员注册</a> | <a href="http://help.sina.com.cn/" target="_blank">产品答疑</a> </p>
+      <p class="copyright SG_linka"> Copyright &copy; 1996 - 2018 SINA Corporation,  All Rights Reserved</p>
+      <p class="SG_linka"> 新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+	  <a href="http://www.bj.cyberpolice.cn/index.jsp"  target="_blank" class="gab_link"></a>
+    </div>
+  </div>
+</div>
+<div id="swfbox"></div>
+</body>
+
+</html>

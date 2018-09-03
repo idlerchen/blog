@@ -1,0 +1,39 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fenbi.blog.bean.Blog;
+import com.fenbi.blog.bean.User;
+import com.fenbi.blog.service.BlogService;
+import com.fenbi.blog.service.impl.BlogServiceImpl;
+import com.fenbi.blog.utils.WEButils;
+
+public class BlogServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+	
+	BlogService bs = new BlogServiceImpl();
+
+	public void saveBlog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		Blog blog = WEButils.param2Bean(request, new Blog());
+		User user = (User) request.getSession().getAttribute("loginUser");
+		blog.setUserid(user.getId());
+		
+		int saveBlog = bs.saveBlog(blog);
+		
+		if(saveBlog > 0) {//插入博文成功
+			response.sendRedirect(request.getContextPath()+"/page/personal/blogManage.jsp");
+		}else {//插入失败
+			request.getRequestDispatcher("/page/personal/writeBlog.jsp");
+			
+		}
+	}
+
+	
+
+}

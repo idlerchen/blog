@@ -1,0 +1,17 @@
+//点击发送评论，发送ajax请求，插入评论，刷新页面
+$("#sendComment").click(function(){
+	var comment = $("#inputComment").val();
+	var blogid = $("#blogbegin").attr("data-blog");
+	$.post("CommentServlet",
+			{"method":"saveComment","blogid":blogid,"content":comment},
+			function(response){
+				if(response.code == 1){//插入成功，刷新页面显示评论
+					location.reload();
+				}else if(response.code == 0){//插入失败
+					alert('系统繁忙');
+				}else{//未登陆，跳转登陆
+					window.location = "/blog/page/user/login.jsp";
+				}
+			},
+			'json');
+})

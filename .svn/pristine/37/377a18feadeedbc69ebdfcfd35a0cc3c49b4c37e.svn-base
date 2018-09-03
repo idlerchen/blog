@@ -1,0 +1,20 @@
+$(function(){
+	$(".atc_more").hover(function(){
+		$(".atc_setlayer").css("display","");
+
+	},
+	function(){
+		$(".atc_setlayer").css("display","none");
+		
+	}
+	
+	);
+	
+	
+	
+	
+	
+	
+	
+	
+});

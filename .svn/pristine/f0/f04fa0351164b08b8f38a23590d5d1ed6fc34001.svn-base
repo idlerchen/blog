@@ -1,0 +1,37 @@
+$(function(){
+	$("#articleSaveBtn").click(function(){
+		var title=$("#articleTitle").val();
+		var content=$("#SinaEditorTextarea").html();
+		var blogType=$("#componentSelect").val();
+		window.location="blogServlet?title="+title+"&content="+content+"&blogType="+blogType;
+		
+		
+	});
+	alert("大网页进来了");
+	getBlogTypeList();
+	function getBlogTypeList(){
+		alert("获取方法来了");
+		$.getJSON("BlogServlet",
+				 {"method":"getBlogType"},
+				 function(json){
+					 
+					 alert("响应回来了");
+					 var blogTypes=json.blogtype;
+					 $.each(blogTypes,function(i,blogType){
+						 var id=blogType.id;
+						 var name=blogType.name;
+						 $("#componentSelect").append("<option value='"+id+"'>"+name+"</option>");
+					 });
+					/* $(json).each(function(i,json1){
+						 $("#componentSelect").append("<option value='"+json1.id+"'>"+json1.name+"</option>");
+					 });	*/		
+		});		
+		
+		
+	};
+
+	
+	
+	
+	
+});

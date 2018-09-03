@@ -1,0 +1,11 @@
+<!--$sinatopbar-->
+<div style="z-index:512;" class="nsinatopbar">
+  <div style="position:absolute;left:0;top:0;" id="trayFlashConnetion"></div>
+  <div class="ntopbar_main"> 
+    <div class="ntopbar_loading"></div>
+     <div id="_1121535640331686_panel" class="ntopbar_login" style="" login="1"><span class="link bk_home">
+     <a href="/blog/first.jsp" target="_blank" suda-uatrack="key=sinahome_from_blog&amp;value=sinahome_from_blogpage"><i class="SG_bkhome"></i>新浪首页</a></span>
+     <a class="login" onclick="v7sendLog('40_01_38');return false;" href="/blog/page/user/login.jsp" action-type="tray-login-btn"><span>登录</span></a>
+     <a class="register" onclick="v7sendLog('40_01_39')" target="_blank" href="/blog/page/user/register.jsp">注册</a></div></div>
+  </div>
+<!--$end sinatopbar-->

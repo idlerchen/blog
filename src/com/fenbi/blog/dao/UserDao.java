@@ -1,0 +1,43 @@
+package com.fenbi.blog.dao;
+
+import com.fenbi.blog.bean.User;
+
+public interface UserDao {
+	/*
+	 * @Description:注册时插入用户信息 
+	* @param user 封装的user用户信息
+	* @return: 返回插入结果 >0插入成功
+	 */
+	int saveUser(User user);
+	
+	/*
+	 * @Description: 登录时验证账号密码是否正确 
+	* @param username 账号
+	* @param password 密码
+	* @return: 结果，返回user对象，在整个会话中使用
+	 */
+	User getUser(String username,String password);
+	
+	/*
+	 * @Description: 注册时检查用户名是否重复
+	* @param username 提交的用户名
+	* @return: 返回是否有该用户
+	 */
+	User checkUsername(String username);
+
+	/*
+	 * @Description:注册时检查手机号是否重复 
+	* @param telephone 提交的手机号
+	* @return: 返回是否有该用户
+	 */
+	User checkTelephone(String telephone);
+	
+	//修改个人信息
+	int updateUser(User user);
+	
+	//根据用户名修改password
+	int updatePassword(String password,String username);
+	
+	//根据用户名修改likes
+	int updateLikes(String likes,String username);
+}

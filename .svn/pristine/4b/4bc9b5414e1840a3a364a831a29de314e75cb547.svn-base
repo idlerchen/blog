@@ -1,0 +1,7 @@
+package com.fenbi.blog.dao;
+
+public interface CommentDao {
+	
+	int getCommentByBlogid(String blogid);
+
+}

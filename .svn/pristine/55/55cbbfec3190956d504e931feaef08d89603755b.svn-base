@@ -1,0 +1,9 @@
+package com.fenbi.blog.dao;
+
+import com.fenbi.blog.bean.Blog;
+
+public interface BlogDao {
+	
+	int saveBlog(Blog blog);
+
+}

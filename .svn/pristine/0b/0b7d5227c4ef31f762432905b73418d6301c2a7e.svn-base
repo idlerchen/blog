@@ -1,0 +1,9 @@
+package com.fenbi.blog.service;
+
+import com.fenbi.blog.bean.Blog;
+
+public interface BlogService {
+	
+	int saveBlog(Blog blog);
+
+}

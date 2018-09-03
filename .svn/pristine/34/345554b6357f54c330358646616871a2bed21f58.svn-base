@@ -1,0 +1,70 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.alibaba.fastjson.JSON;
+import com.fenbi.blog.bean.Comment;
+import com.fenbi.blog.bean.User;
+import com.fenbi.blog.service.BlogService;
+import com.fenbi.blog.service.CommentService;
+import com.fenbi.blog.service.impl.BlogServiceImpl;
+import com.fenbi.blog.service.impl.CommentServiceImpl;
+import com.fenbi.blog.utils.WEButils;
+
+public class CommentServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	CommentService cs = new CommentServiceImpl();
+	BlogService bs = new BlogServiceImpl();
+	public void delComment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String commentId = request.getParameter("commentId");
+		
+		int delComment = cs.delComment(commentId);
+		
+		if(delComment >0 ) {
+			//删除成功
+		}else {
+			//删除失败
+		}
+	}
+	
+	public void saveComment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Comment comment = WEButils.param2Bean(request, new Comment());
+		String blogid = request.getParameter("blogid");
+		User user = (User) request.getSession().getAttribute("loginUser");
+		
+		response.setContentType("application/json;charset=utf-8");
+		// 设置map属性集
+		HashMap<String, Object> map = new HashMap<>();
+			
+		if(user!=null) {
+			comment.setUserid(user.getId());
+		
+			int saveComment = cs.saveComment(comment);
+			
+			if(saveComment >0 ) {
+				//删除成功,该条博客评论数+1
+				map.put("code", 1);
+				bs.updateCommentNum(blogid);
+			}else {
+				//删除失败
+				map.put("code", 0);
+			}
+		}
+		else {
+			map.put("code", -1);
+		}
+		
+		// 将map属性集，转换成json字符串并发送给ajax
+		String jsonStr = JSON.toJSONString(map);
+		response.getWriter().print(jsonStr);
+	}
+
+	
+}

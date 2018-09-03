@@ -1,0 +1,17 @@
+package com.fenbi.blog.dao;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Blog;
+
+public interface BlogDao {
+	
+	int saveBlog(Blog blog);
+	
+	List<Blog> getAllBlog();
+	
+	List<Blog> getBlogByBlogtype(String blogtype);
+	
+	List<Blog> getBlogByUserid(int userid);
+
+}

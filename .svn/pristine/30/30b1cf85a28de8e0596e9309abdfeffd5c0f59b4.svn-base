@@ -1,0 +1,30 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fenbi.blog.service.CommentService;
+import com.fenbi.blog.service.impl.CommentServiceImpl;
+
+public class CommentServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	CommentService cs = new CommentServiceImpl();
+	public void delComment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String commentId = request.getParameter("commentId");
+		
+		int delComment = cs.delComment(commentId);
+		
+		if(delComment >0 ) {
+			//删除成功
+		}else {
+			//删除失败
+		}
+	}
+
+	
+}

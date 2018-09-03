@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<%@ include file="/page/base/base.jsp"%>
+<meta charset="UTF-8">
+<title>register</title>
+<link rel="stylesheet" href="css/frame.css" />
+<link rel="stylesheet" href="css/github.css" />
+<link rel="stylesheet" href="css/site.css" />
+<link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body class="logged-out env-production signup">
+
+	<div id="wrap">
+		<!-- 标准二级导航_博客 begin -->
+		<div style="margin-bottom: 6px; margin-top: 4px;">
+			<div class="secondaryHeader">
+				<div class="sHBorder">
+					<div class="sHLogo">
+						<span><a href="http://blog.sina.com.cn/"><img
+								src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif"
+								alt="新浪博客" /></a><a href="http://blog.sina.com.cn/"><img
+								src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_blog.gif"
+								alt="新浪博客" /></a></span>
+					</div>
+					<div class="sHLinks">
+						<a href="login.html">登录</a>&nbsp;|&nbsp; <a href="register.html">注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="banner">
+			<h1>欢迎注册</h1>
+		</div>
+
+	</div>
+
+	<div role="main" class="application-main ">
+
+		<div id="js-pjax-container" data-pjax-container>
+
+			<div class="bg-shade-gradient">
+				<div class="container-lg p-responsive py-5">
+					<div class="setup-header setup-org">
+						<h1 style="line-height: 65px;">Join Blog</h1>
+					</div>
+
+					<div class="d-md-flex flex-justify-between gutter-md-spacious ">
+						<div class="col-sm-8 col-md-6 setup-form-container">
+
+							<form autocomplete="off" id="signup-form"
+								class="setup-form js-signup-form js-octocaptcha-parent"
+								action="/join" accept-charset="UTF-8" method="post">
+								<input name="utf8" type="hidden" value="&#x2713;" /><input
+									type="hidden" name="authenticity_token"
+									value="BUxtv+hUJ1IsWBKayY1OlugunKa2XUO46TuSJKFohUltGgd01NdGL3fAjcVlKZTWLkThd3iuCWuT81VuIuB6MA==" />
+
+								<dl class="form-group">
+										<label>用户名：</label>
+									<input name="username" class="form-control" type="text" id="user_login" />
+								</dl>
+
+								<dl class="form-group">
+									<dt class="input-label">
+										<label>手机号：</label>
+									</dt>
+									<input name="email" class="form-control" type="text"
+										id="user_email" />
+								</dl>
+
+								<dl class="form-group">
+									<dt class="input-label">
+										<label name="user[password]" for="user_password">密码：</label>
+									</dt>
+									<input name="password" class="form-control" type="password"
+										id="user_password" />
+								</dl>
+
+								<input type="hidden" name="source" class="js-signup-source"
+									value="header-home">
+
+								<button type="submit" class="btn btn-primary" id="signup_button">点击注册</button>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

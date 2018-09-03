@@ -1,0 +1,62 @@
+package com.fenbi.blog.service.impl;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Blog;
+import com.fenbi.blog.dao.BlogDao;
+import com.fenbi.blog.dao.impl.BlogDaoImpl;
+import com.fenbi.blog.service.BlogService;
+
+public class BlogServiceImpl implements BlogService {
+	
+	BlogDao bd = new BlogDaoImpl();
+	
+	@Override
+	public int saveBlog(Blog blog) {
+		
+		return bd.saveBlog(blog);
+	}
+
+	@Override
+	public List<Blog> getAllBlog() {
+		
+		return bd.getAllBlog();
+	}
+
+	@Override
+	public List<Blog> getBlogByBlogtype(String blogtype) {
+		
+		return bd.getBlogByBlogtype(blogtype);
+	}
+
+	@Override
+	public List<Blog> getBlogByUserid(int userid) {
+		
+		return bd.getBlogByUserid(userid);
+	}
+
+	@Override
+	public int updateBlog(Blog blog) {
+		
+		return bd.updateBlog(blog);
+	}
+
+	@Override
+	public int delBlog(String blogid) {
+		
+		return bd.delBlog(blogid);
+	}
+
+	@Override
+	public List<Blog> getBlogByblogtitle(String title) {
+		// TODO Auto-generated method stub
+		return bd.getBlogByblogtitle(title);
+	}
+
+	@Override
+	public List<Blog> getBlogBylikeNum() {
+		// TODO Auto-generated method stub
+		return bd.getBlogBylikeNum();
+	}
+
+}

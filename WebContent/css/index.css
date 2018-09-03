@@ -1,0 +1,575 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body,
+td,
+p,
+div,
+li,
+select,
+input,
+textarea {
+	font-size: 12px;
+}
+
+body {
+	line-height: 20px;
+	color: #333;
+}
+
+ul {
+	list-style-type: none;
+}
+
+select,
+input {
+	vertical-align: middle;
+}
+
+#wrap {
+	width: 950px;
+	margin: 0 auto;
+	color: #333;
+}
+
+.clearit {
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	height: 0;
+}
+
+
+/*链接*/
+
+a:link,
+a:visited {
+	color: #646569;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #F00;
+	text-decoration: none;
+}
+
+.link-ul a:link,
+.link-ul a:visited {
+	color: #646569;
+	text-decoration: none;
+}
+
+.link-ul a:hover,
+.link-ul a:active {
+	color: #F00;
+	text-decoration: underline;
+}
+
+.linkFFF a:link,
+.linkFFF a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.linkFFF a:hover,
+.linkFFF a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.link3164bf {
+	color: #3164bf;
+}
+
+.link3164bf a:link,
+.link3164bf a:visited {
+	color: #3164bf;
+	text-decoration: none;
+}
+
+.link3164bf a:hover,
+.link3164bf a:active {
+	color: #f00;
+	text-decoration: underline;
+}
+
+.link335bbd a:link,
+.link335bbd a:visited {
+	color: #335bbd;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.link335bbd a:hover,
+.link335bbd a:active {
+	color: #f00;
+	text-decoration: underline;
+}
+
+
+/*列表*/
+
+ul.liNstyle {
+	padding: 5px 0 40px 0;
+}
+
+.liNstyle li {
+	padding-left: 3em;
+	height: 20px;
+	line-height: 20px;
+	font-weight: bold;
+	margin: 3px 0;
+}
+
+.liNstyle li.selec {
+	background: url(http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_022.gif) no-repeat;
+}
+
+.liNstyle a:link,
+.liNstyle a:visited {
+	color: #5d83b0;
+	text-decoration: none;
+}
+
+.liNstyle a:hover,
+.liNstyle a:active {
+	color: #f00;
+	text-decoration: underline;
+}
+
+
+/* sinanav */
+
+.sinanav {
+	width: 950px;
+	height: 40px;
+	overflow: hidden;
+	border: 1px #e3e3e3 solid;
+	border-left: none;
+	border-right: none;
+	clear: both;
+	margin: 0 0 5px 0;
+	background: #fff;
+	padding: 3px 0 2px;
+}
+
+.sinanav li {
+	width: 59px;
+	height: 20px;
+	overflow: hidden;
+	text-align: center;
+	background: url(http://i0.sinaimg.cn/IT/techshouye/images/tech_i_ws_001.gif) no-repeat 100% 35%;
+	color: #353535;
+	float: left;
+	line-height: 20px;
+}
+
+.sinanav li a:link,
+.sinanav li a:visited {
+	color: #353535;
+	text-decoration: none;
+}
+
+.sinanav li a:hover,
+.sinanav li a:active {
+	color: #c00;
+	text-decoration: underline;
+}
+
+.sinanav .sinanavnb {
+	background: none;
+}
+
+li.linkRed02 a:link,
+li.linkRed02 a:visited {
+	color: #f00;
+}
+
+li.linkRed02 a:hover,
+li.linkRed02 a:active {
+	color: #c00;
+}
+
+
+/*共用样式*/
+
+.hScape {
+	height: 8px;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	clear: both;
+	background: #fff;
+}
+
+
+/*banner*/
+
+#banner {
+	width: 950px;
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_004.jpg) no-repeat;
+	height: 90px;
+	margin-top: 5px
+}
+
+#banner h1 {
+	color: #fff;
+	font-size: 32px;
+	font-family: simhei;
+	padding: 35px 0 0 180px;
+}
+
+#banner span {
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	padding: 0 0 0 420px;
+}
+
+
+/*导航*/
+
+#nav1 {
+	height: 34px;
+	text-align: right;
+	line-height: 34px;
+}
+
+#nav1 img {
+	float: left;
+}
+
+
+/* 导航l1 */
+
+#nav_l1 {
+	clear: both;
+	height: 33px;
+	width: 950px;
+	margin-top: 5px;
+}
+
+#nav_l1 #nav_l1_logo {
+	float: left;
+	height: 33px;
+	width: 122px;
+	text-align: left;
+}
+
+#nav_l1 #nav_l1_lnk {
+	line-height: 23px;
+	text-align: right;
+	float: right;
+	height: 23px;
+	width: 470px;
+	margin-top: 10px;
+	padding-right: 4px;
+}
+
+#nav_l1 #nav_l1_lnk a:link,
+#nav_l1 #nav_l1_lnk a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+#nav_l1 #nav_l1_lnk a:active,
+#nav_l1 #nav_l1_lnk a:hover {
+	color: #f00;
+	text-decoration: none;
+}
+
+#nav2 {
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_003.gif) repeat-x;
+	height: 40px;
+}
+
+#nav2 #navTop {
+	height: 33px;
+	padding-top: 7px;
+	overflow: hidden;
+	display: inline-block;
+	text-align: center;
+}
+
+#nav2 #navTop ul li {
+	display: inline;
+}
+
+#nav2 #navTop img {
+	vertical-align: middle;
+}
+
+#nav2 #navBot {
+	height: 30px;
+}
+
+#nav2 {
+	text-align: center;
+}
+
+
+/*CSS for main begin*/
+
+.Cont {
+	width: 950px;
+	overflow: hidden;
+	display: inline-block;
+	background: url(http://i3.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_028.gif) repeat-y right 0;
+}
+
+.Cont .le {
+	float: left;
+	width: 126px;
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_021.gif) repeat-y;
+}
+
+.Cont .le h2 {
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_012.gif) no-repeat;
+	height: 25px;
+	font-size: 12px;
+	line-height: 28px;
+	padding-left: 2.7em;
+	color: #2d5ca0;
+}
+
+.Cont .ri {
+	float: left;
+	width: 824px;
+	height: 620px;
+	border-bottom: 1px solid #9ab3f3;
+	padding-bottom: 10px;
+}
+
+.Cont .ri h2 {
+	background: url(http://i3.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_019.gif) no-repeat 8px 5px;
+	color: #fff;
+	font-size: 12px;
+	padding-left: 2em;
+}
+
+.Cont .ri table {
+	width: 818px;
+	margin: 0 2px 0 3px;
+}
+
+.Cont .ri th {
+	border-bottom: 1px solid #92b5ef;
+	background: #eef5ff;
+	font-weight: normal;
+	color: #5b5e65;
+	font-size: 12px;
+	line-height: 23px;
+	height: 23px;
+}
+
+.Cont .ri td {
+	line-height: 23px;
+	text-align: center;
+	color: #5f5f5f;
+}
+
+.Cont .ri td.textL {
+	text-align: left;
+}
+
+.Cont .ri td span {
+	width: 40px;
+	height: 11px;
+	line-height: 11px;
+	text-align: center;
+	font-weight: bold;
+	display: block;
+	margin: 0px 0 0 12px;
+	_margin: 0;
+}
+
+.botBg {
+	background: url(http://i3.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_011.gif) no-repeat;
+	height: 7px;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	clear: both;
+}
+
+
+/*舌签样式*/
+
+ul.menuStyle {
+	border-bottom: 5px solid #4b76bb;
+	height: 27px;
+}
+
+.menuStyle li {
+	float: left;
+	background: url(http://i2.sinaimg.cn/blog/main/rank/bang_tab.gif) no-repeat;
+	width: 89px;
+	height: 27px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	cursor: pointer;
+	line-height: 27px;
+	color: #335bb2;
+	margin-right: 5px;
+}
+
+.menuStyle li.selectd {
+	color: #fff;
+	background: url(http://i2.sinaimg.cn/blog/main/rank/bang_tab_on.gif) no-repeat;
+}
+
+ul.menuStyleIn {
+	background: #96b3eb;
+	height: 28px;
+}
+
+.menuStyleIn li {
+	float: left;
+	background: url(http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_017.gif) no-repeat;
+	width: 22px;
+	height: 23px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 23px;
+	color: #0c3591;
+	margin: 5px 0 0 3px;
+}
+
+.menuStyleIn li.selectd {
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_016.gif) no-repeat;
+}
+
+.menuStyleIn li a:link {
+	color: #0c3591;
+}
+
+.menuStyleIn li.new {
+	float: left;
+	background: url(http://i1.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_017_1.gif) no-repeat;
+	width: 30px;
+	height: 23px;
+	text-align: center;
+	cursor: pointer;
+	line-height: 23px;
+	color: #0c3591;
+	margin: 5px 0 0 3px;
+}
+
+.menuStyleIn li.newselectd {
+	background: url(http://i0.sinaimg.cn/blog/deco/2007/1219/ph_blog_lmy_016_1.gif) no-repeat;
+	width: 30px;
+	height: 23px;
+}
+
+
+/*CSS for main end*/
+
+
+/*CSS for copyright begin*/
+
+#uni_footer {
+	width: 950px;
+	line-height: 28px;
+	text-align: center;
+	color: #000;
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+#uni_footer a:link,
+#uni_footer a:visited {
+	color: #00f;
+	text-decoration: none;
+}
+
+#uni_footer a:hover,
+#uni_footer a:active {
+	color: #f00;
+	text-decoration: underline;
+}
+
+
+/*CSS for copyright end*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+b,
+strong {
+	font-weight: normal;
+}
+
+.menuStyleli {
+	font-weight: normal;
+}
+
+.liNstyle li {
+	font-weight: normal;
+}
+
+.secondaryHeader {
+	height: 33px;
+	overflow: hidden;
+	background: url(http://i2.sinaimg.cn/dy/images/header/2008/standardl2nav_bg.gif) repeat-x #fff;
+	color: #000;
+	font-size: 12px;
+	font-weight: 100;
+}
+
+.secondaryHeader a,
+.secondaryHeader a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.secondaryHeader a:hover,
+.secondaryHeader a:active {
+	color: #c00;
+	text-decoration: underline;
+}
+
+.sHBorder {
+	border: 1px #e3e3e3 solid;
+	padding: 0 10px 0 12px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.sHLogo {
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	overflow: hidden;
+}
+
+.sHLogo span {
+	display: block;
+	float: left;
+	display: table-cell;
+	vertical-align: middle;
+	*display: block;
+	*font-size: 27px;
+	*font-family: Arial;
+	height: 31px;
+}
+
+.sHLogo span img {
+	vertical-align: middle;
+}
+
+.sHLinks {
+	float: right;
+	line-height: 31px;
+	font-family: "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "Arial Narrow";
+}

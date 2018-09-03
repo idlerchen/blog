@@ -1,0 +1,298 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+<%@ include file="/page/base/base.jsp"%>
+<meta charset="UTF-8">
+<title>个人中心</title>
+<link rel="stylesheet" href="css/myIndex.css" />
+
+<link
+	href="http://simg.sinajs.cn/blog7style/css/conf/blog/personalM.css"
+	type="text/css" rel="stylesheet" />
+<style id="tplstyle" type="text/css">
+	@charset "utf-8";
+	@import url("http://simg.sinajs.cn/blog7newtpl/css/30/30_1/t.css");
+</style>
+
+</head>
+
+<body>
+	<!-- 头部登录区域 -->
+	<div style="z-index: 512;" class="nsinatopbar">
+		<div style="position: absolute; left: 0; top: 0;"
+			id="trayFlashConnetion"></div>
+		<div class="ntopbar_main">
+			<a id="login_bar_logo_link_350" href="http://blog.sina.com.cn"
+				target="_blank"><img class="ntopbar_logo"
+				src="http://simg.sinajs.cn/blog7style/images/common/topbar/topbar_logo.gif"
+				width="100" alt="新浪博客"></a>
+			<div class="ntopbar_floatL">
+				<div class="ntopbar_search" id="traySearchBar"></div>
+				<div class="ntopbar_ad" id="loginBarActivity" style="display: none;"></div>
+			</div>
+			<!--<div class="ntopbar_loading"><img src="http://simg.sinajs.cn/blog7style/images/common/loading.gif">加载中…</div>-->
+		</div>
+	</div>
+	<!--$end sinatopbar-->
+
+	<div class="sinabloga" id="sinabloga">
+		<div id="sinablogb" class="sinablogb">
+
+			<div id="sinablogHead" class="sinabloghead">
+				<div style="display: none;" id="headflash" class="headflash"></div>
+				<div id="headarea" class="headarea">
+					<div id="blogTitle" class="blogtoparea">
+						<h1 id="blogname" class="blogtitle">
+							<a href="#"><span id="blognamespan">${loginUser.username }</span></a>
+						</h1>
+
+						<div id="bloglink" class="bloglink">
+							<p>${loginUser.likes }</p>
+						</div>
+					</div>
+					<div class="blognav" id="blognav">
+						<div id="blognavBg" class="blognavBg"></div>
+						<div class="blognavInfo">
+							<span><a href="index.jsp">首页</a></span>
+							<span><a href="index.jsp">博文目录</a></span>
+							<span><a href="#">图片</a></span>
+							<span class="last"><a class="on" href="page/personal/personalCenter.jsp">关于我</a></span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!--主题内容开始 -->
+			<div class="sinablogbody" id="sinablogbody">
+
+				<!--第一列start-->
+				<div id="column_1" class="SG_colW21 SG_colFirst">
+					<div class="SG_conn" id="module_901">
+						<div class="SG_connHead">
+							<span class="title">个人资料</span> 
+							<span class="edit"></span>
+						</div>
+						<div class="SG_connBody">
+							<div class="info">
+
+								<div class="info_img" id="comp_901_head">
+									<img src="/img/333.png" id="comp_901_head_image" width="180" height="180" />
+								</div>
+
+								<div class="info_txt">
+									<div class="info_nm">
+										<span class="SG_txtb"><strong id="ownernick">${loginUser.username }</strong></span>
+										<div class="clearit"></div>
+									</div>
+									<div class="SG_j_linedot"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!--第一列end-->
+
+				<!--第二列start-->
+				<div id="column_2" class="SG_colW73">
+					<div id="module_938" class="SG_conn">
+						<div class="SG_connHead">
+							<span class="title">我的资料</span> 
+							<a class="edit" id="changeMyFile">修改个人资料</a>
+							<a class="edit" id="changeMyPassword">修改密码</a>
+						</div>
+						<div class="SG_connBody">
+							<div class="aBfocuse">
+								<div class="component personRight">
+									<!-- 基本信息开始 -->
+									<div class="basicInfo SG_j_linedot1">
+										<table class="personTable">
+											<tbody>
+												<tr>
+													<th align="left" colspan="2">我的账号：</th>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="personTable" id="basicAddItem">
+											<tbody>
+												<tr>
+													<td>
+														<p class="personIntro CP_txta" id="myUsername">${loginUser.username }</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+									<!-- 基本信息结束 -->
+
+									<!-- 个人经历开始 -->
+									<div class="basicInfo SG_j_linedot1">
+										<table class="personTable">
+											<tbody>
+												<tr>
+													<th align="left" colspan="2">我的密码：</th>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="personTable">
+
+											<tbody id="careerInfoRes">
+												<tr>
+													<td>
+														<p class="personIntro CP_txta">你的密码非常安全，如需修改请点击右上角修改密码。</p> 
+														<input placeholder="请输入修改的密码" id="password_input" style="visibility: hidden;" />
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<input type="submit" id="savePassword" value="保存" style="visibility: hidden;" /> 
+									<input type="submit" id="cancelPassword" value="取消" style="visibility: hidden;" />
+									<!-- 个人经历结束 -->
+
+									<!-- 个人简介开始 -->
+									<div class="basicInfo">
+										<table class="personTable">
+											<tbody>
+												<tr>
+													<th align="left" colspan="2">我的简介：</th>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="personTable">
+											<tbody id="resumeInfoRes">
+												<tr>
+													<td>
+														<p class="personIntro CP_txta" id="myLikes">${loginUser.likes }</p> 
+														<input placeholder="输入您的简介" id="myFile_input" style="visibility: hidden;" />
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<input type="submit" id="saveFile" value="保存" style="visibility: hidden;"/> 
+								<input type="submit" id="cancelFile" value="取消" style="visibility: hidden;"/>
+							</div>
+						</div>
+					</div>
+
+					<div id="module_942" class="SG_conn">
+						<div class="SG_connHead">
+							<span class="title">我的博文</span>
+						</div>
+						<div id="comment" class="SG_connBody"
+							style="margin: 0px auto; padding: 20px;">
+							<table class="table1" id="table_lit_bang_105">
+
+								<tr>
+									<th width="5%" align="center" style="visibility: hidden;">序号</th>
+									<th width="40%">标题</th>
+									<th width="25%">作者</th>
+									<th width="10%">时间</th>
+									<th width="10%">修改</th>
+									<th width="10%">删除</th>
+								</tr>
+								
+								<c:forEach items="${blogs }" var="blog">
+									<tr>
+										<td>
+											<div class="num">
+												<span>${blog.id }</span>
+											</div>
+										</td>
+										<td style="text-align: left;">
+											<div class="link335bbd textL">
+												<a href="#" target="_blank">${blog.title }</a>
+											</div>
+										</td>
+										<td>
+											<div class="link-ul">
+												<a class="a02" target="_blank" href="#">${loginUser.username }</a>
+											</div>
+										</td>
+										<td><f:formatDate value="${blog.createTime }" pattern="MM-dd"/></td>
+										<td><a href="#">修改</a></td>
+										<td><a href="#">删除</a></td>
+									</tr>
+								</c:forEach>
+							</table>
+						</div>
+
+					</div>
+
+					<div id="module_942" class="SG_conn">
+						<div class="SG_connHead">
+							<span class="title">我收到的评论</span>
+						</div>
+						<div id="comment" class="SG_connBody"
+							style="margin: 0px auto; padding: 10px;">
+							<p style="text-align: center; font-size: 15px;">很好的文章</p>
+						</div>
+						<div id="comment" class="SG_connBody"
+							style="margin: 0px auto; padding: 10px;">
+							<p style="text-align: center; font-size: 15px;">博客互踩谢谢</p>
+						</div>
+						<div id="comment" class="SG_connBody"
+							style="margin: 0px auto; padding: 10px;">
+							<p style="text-align: center; font-size: 15px;">学到东西了，感谢博主</p>
+						</div>
+						<div id="comment" class="SG_connBody"
+							style="margin: 0px auto; padding: 10px;">
+							<p style="text-align: center; font-size: 15px;">写的太高大上了</p>
+						</div>
+					</div>
+					<!--主题内容结束 -->
+
+					<div id="diggerFla"
+						style="position: absolute; left: 0px; top: 0px; width: 0px"></div>
+					<div class="sinablogfooter" id="sinablogfooter"
+						style="position: relative;">
+
+						<p class="SG_linka">
+							<a href="http://help.sina.com.cn/" target="_blank">新浪BLOG意见反馈留言板</a>
+							电话：4006900000 提示音后按1键（按当地市话标准计费） 欢迎批评指正
+						</p>
+
+						<p class="SG_linka">
+							<a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a> |
+							<a href="http://corp.sina.com.cn/eng/" target="_blank">About
+								Sina</a> | <a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a>
+							| <a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a>
+							| <a href="http://corp.sina.com.cn/chn/sina_job.html"
+								target="_blank">招聘信息</a> | <a
+								href="http://www.sina.com.cn/intro/lawfirm.shtml"
+								target="_blank">网站律师</a> | <a href="http://english.sina.com"
+								target="_blank">SINA English</a> | <a
+								href="http://members.sina.com.cn/apply/" target="_blank">会员注册</a>
+							| <a href="http://help.sina.com.cn/" target="_blank">产品答疑</a>
+						</p>
+						<p class="copyright SG_linka">Copyright &copy; 1996 - 2018
+							SINA Corporation, All Rights Reserved</p>
+						<p class="SG_linka">
+							新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml"
+								target="_blank">版权所有</a>
+						</p>
+						<a href="http://www.bj.cyberpolice.cn/index.jsp" target="_blank"
+							class="gab_link"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="myjs/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="myjs/personalCenter.js"></script>
+</body>
+
+</html>

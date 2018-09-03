@@ -1,0 +1,12 @@
+//点击超链接获取对应分类博文
+$(function(){
+	//点击分类栏目
+	$(".liNstyle a").click(function(){
+		var typeId = $(this).attr("id");
+		window.location = "BlogServlet?method=getBlogByTypeId&blogtypeid=" + typeId;
+	});
+	$("div.link335bbd a").click(function(){
+		var blogId = $(this).attr("id");
+		window.location.href="BlogServlet?method=getBlogById&blogId=" + blogId;
+	});
+});

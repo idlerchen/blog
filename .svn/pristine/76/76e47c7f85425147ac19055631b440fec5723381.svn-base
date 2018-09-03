@@ -1,0 +1,18 @@
+package com.fenbi.blog.service.impl;
+
+import com.fenbi.blog.bean.Blog;
+import com.fenbi.blog.dao.BlogDao;
+import com.fenbi.blog.dao.impl.BlogDaoImpl;
+import com.fenbi.blog.service.BlogService;
+
+public class BlogServiceImpl implements BlogService {
+	
+	BlogDao bd = new BlogDaoImpl();
+	
+	@Override
+	public int saveBlog(Blog blog) {
+		
+		return bd.saveBlog(blog);
+	}
+
+}

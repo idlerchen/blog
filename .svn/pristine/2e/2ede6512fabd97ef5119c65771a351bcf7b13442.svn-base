@@ -1,0 +1,77 @@
+
+$("#changeMyPassword").click(function(){
+	
+	$("#password_input").css("visibility","visible");
+	
+	$("#savePassword").css("visibility","visible");
+	
+	$("#cancelPassword").css("visibility","visible");
+	
+});
+
+
+$("#changeMyFile").click(function(){
+	
+	$("#myFile_input").css("visibility","visible");
+	
+	$("#saveFile").css("visibility","visible");
+	
+	$("#cancelFile").css("visibility","visible");
+});
+
+$("#cancelPassword").click(function(){
+	
+	$("#password_input").css("visibility","hidden");
+	
+	$("#savePassword").css("visibility","hidden");
+	
+	$("#cancelPassword").css("visibility","hidden");
+	
+});
+
+$("#cancelFile").click(function(){
+	
+	$("#myFile_input").css("visibility","hidden");
+	
+	$("#saveFile").css("visibility","hidden");
+	
+	$("#cancelFile").css("visibility","hidden");
+	
+});
+
+$("#savePassword").click(function(){
+	
+	var username = $("#myUsername").html();
+	alert(username);
+	
+	var password = $("#password_input").val();
+	
+	if(password == ""){
+		$("#error_msg").html("密码不能为空X");
+		return false;
+	}
+	
+	// 密码匹配正则（不少于6位）
+	var reg = /^\d{6}$/g;
+	
+	if(!reg.test(password)){
+		$("#error_msg").html("密码不能少于6位X");
+		return false;
+	}
+	
+	// 提交数据
+	
+	
+});
+
+// 点击保存个人简介按钮时
+$("#saveFile").click(function(){
+	
+	alert("33");
+	
+	
+	
+});
+
+
+

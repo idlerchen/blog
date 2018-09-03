@@ -1,0 +1,23 @@
+package com.fenbi.blog.dao;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Blog;
+
+public interface BlogDao {
+	//插入博文
+	int saveBlog(Blog blog);
+	
+	//获取所有博文
+	List<Blog> getAllBlog();
+	
+	//根据博文类型获取博文
+	List<Blog> getBlogByBlogtype(String blogtype);
+	
+	//根据用户获取博文
+	List<Blog> getBlogByUserid(int userid);
+	
+	//修改-编辑博文
+	int updateBlog(Blog	blog);
+
+}

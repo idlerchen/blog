@@ -1,0 +1,11 @@
+package com.fenbi.blog.dao;
+
+import com.fenbi.blog.bean.User;
+
+public interface UserDao {
+	
+	int saveUser(User user);
+	
+	User getUser(String username,String password);
+
+}

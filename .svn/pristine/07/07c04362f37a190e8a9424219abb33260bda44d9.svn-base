@@ -1,0 +1,32 @@
+package com.fenbi.blog.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.fenbi.blog.service.CommentService;
+import com.fenbi.blog.service.impl.CommentServiceImpl;
+
+public class CommentServlet extends BaseServlet {
+
+	private static final long serialVersionUID = 1L;
+
+	CommentService cs = new CommentServiceImpl();
+	public void delComment(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String comment_id = request.getParameter("comment_id");
+		
+		int row = cs.delComment(comment_id);
+		
+		if(row >0 ) {
+			request.getRequestDispatcher("UserServlet?method=toPersonalCenter").forward(request, response);
+		}else {
+			System.out.println("删除失败");
+			request.getRequestDispatcher("UserServlet?method=toPersonalCenter").forward(request, response);
+		}
+	}
+
+	
+}

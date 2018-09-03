@@ -1,0 +1,19 @@
+package com.fenbi.blog.dao.impl;
+
+import java.util.List;
+
+import com.fenbi.blog.bean.Comment;
+import com.fenbi.blog.dao.BaseDao;
+import com.fenbi.blog.dao.CommentDao;
+
+public class CommentDaoImpl extends BaseDao<Comment> implements CommentDao {
+
+	@Override
+	public List<Comment> getCommentByBlogid(String blogid) {
+		String sql = "SELECT id,userid,blogid,content,create_time createTime " + 
+				"FROM COMMENT " + 
+				"WHERE blogid = ?";
+		return this.getBeanList(sql, blogid);
+	}
+
+}

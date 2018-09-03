@@ -1,0 +1,23 @@
+$(function(){
+	$("#articleSaveBtn").click(function(){
+		var title=$("#articleTitle").val();
+		var content=$("#SinaEditorTextarea").html();
+		var blogType=$("#componentSelect").val();
+		window.location="/blog/blogServlet?title="+title+"&content="+content+"&blogType="+blogType;
+		
+		
+	});
+	
+	$.getJSON("/blog/BlogServlet",
+			 {"method":"getBlogType"},
+			 function(json){
+				 //遍历province集合
+				 $(json).each(function(i,json1){
+				 $("#componentSelect").append("<option value='"+json1.id+"'>"+json1.name+"</option>");
+		});			
+	});		
+	
+	
+	
+	
+});
